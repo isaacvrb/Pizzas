@@ -128,8 +128,10 @@ function updateCart(){
             }
             let = pizzaName = `${pizzaItem.name} (${pizzaSizeName})`
             let cartItem = c('.models .cart--item').cloneNode(true);
+            let itemSub = cart[i].qt * cart[i].price;
             cartItem.querySelector('img').src = pizzaItem.img;
             cartItem.querySelector('.cart--item-nome').innerHTML = pizzaName;
+            cartItem.querySelector('.cart--item-subtotal').innerHTML = `R$ ${itemSub.toFixed(2)}`;
             cartItem.querySelector('.cart--item--qt').innerHTML = cart[i].qt;
             cartItem.querySelector('.cart--item-qtmais').addEventListener('click', ()=>{
                 cart[i].qt++;

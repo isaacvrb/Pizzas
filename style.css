@@ -49,7 +49,7 @@ aside {
     overflow-x:hidden;
 }
 aside.show {
-    width:30vw;
+    width:33vw
 }
 .cart--area {
     padding:20px;
@@ -275,7 +275,10 @@ h1 {
     margin-right:20px;
 }
 .cart--item-nome {
-    flex:1;
+    flex:3;
+}
+.cart--item-subtotal {
+    padding: 10px;
 }
 .cart--item--qtarea {
     display:inline-flex;
@@ -330,9 +333,18 @@ h1 {
     background-color:#35af4a;
 }
 
-@media (max-width:1000px) {
+@media (max-width:1050px) {
+    aside.show {
+        width:37vw
+    }
     .pizza-area {
         grid-template-columns: repeat(2, 1fr);
+    }
+    .cart--item-nome {
+        font-size: 14px;
+    }
+    .cart--item-subtotal {
+        font-size: 10px;
     }
 }
 
@@ -367,6 +379,13 @@ h1 {
     }
     .cart--area {
         width:100vw;
+    }
+
+    .cart--item-nome {
+        font-size: 12px;
+    }
+    .cart--item-subtotal {
+        font-size: 10px;
     }
 
     .menu-closer {
